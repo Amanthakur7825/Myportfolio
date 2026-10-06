@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact Aman Kumar Thakur | Get In Touch{% endblock %}
+
+{% block content %}
+<!-- Contact Hero -->
+<section class="page-hero">
+    <div class="section-container">
+        <div class="page-hero-content text-center">
+            <span class="section-kicker">Get In Touch</span>
+            <h1 class="page-title">Let's Start a <span class="gradient-text">Conversation</span></h1>
+            <p class="page-subtitle">
+                Have a project idea, a freelance inquiry, or an engineering role you'd like to discuss? Reach out through the form below or connect via direct channels.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Main Section -->
+<section class="contact-section">
+    <div class="section-container">
+        <div class="contact-grid">
+            <!-- Left Info Column -->
+            <div class="contact-info-panel">
+                <div class="contact-status-card">
+                    <span class="pulse-indicator"></span>
+                    <div>
+                        <h3>Currently Available</h3>
+                        <p>Open for freelance contracts, full-time positions, and collaborative web development projects.</p>
+                    </div>
+                </div>
+
+                <div class="contact-cards-list">
+                    <div class="contact-method-card">
+                        <div class="method-icon icon-cyan">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="method-details">
+                            <span class="method-label">Direct Email</span>
+                            <a href="mailto:contact@amankumar.dev" class="method-value">contact@amankumar.dev</a>
+                            <small class="method-note">Typical response within 24 hours</small>
+                        </div>
+                    </div>
+
+                    <div class="contact-method-card">
+                        <div class="method-icon icon-indigo">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="method-details">
+                            <span class="method-label">Location</span>
+                            <span class="method-value">India</span>
+                            <small class="method-note">Available for global remote collaboration</small>
+                        </div>
+                    </div>
+
+                    <div class="contact-method-card">
+                        <div class="method-icon icon-violet">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div class="method-details">
+                            <span class="method-label">Working Hours</span>
+                            <span class="method-value">Mon &ndash; Sat (IST)</span>
+                            <small class="method-note">Flexible across international time zones</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-socials-card">
+                    <h4>Connect on Social Platforms</h4>
+                    <div class="social-links-row">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn" aria-label="Twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Form Column -->
+            <div class="contact-form-panel">
+                <div class="form-container-card">
+                    <div class="form-card-header">
+                        <h2>Send a Message</h2>
+                        <p>Fill out the details below and I'll respond as soon as possible.</p>
+                    </div>
+
+                    <form method="POST" action="{% url 'contact' %}" class="custom-contact-form" id="contactForm">
+                        {% csrf_token %}
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName" class="form-label">
+                                    <i class="fa-regular fa-user"></i>
+                                    <span>Your Full Name *</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="contactName" 
+                                    name="name" 
+                                    class="form-control" 
+                                    placeholder="e.g. Alex Johnson" 
+                                    required
+                                    autocomplete="name"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactEmail" class="form-label">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    <span>Email Address *</span>
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="contactEmail" 
+                                    name="email" 
+                                    class="form-control" 
+                                    placeholder="e.g. alex@example.com" 
+                                    required
+                                    autocomplete="email"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactSubject" class="form-label">
+                                <i class="fa-regular fa-bookmark"></i>
+                                <span>Subject or Purpose</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="contactSubject" 
+                                name="subject" 
+                                class="form-control" 
+                                placeholder="e.g. New Web Project / Job Opportunity"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage" class="form-label">
+                                <i class="fa-regular fa-comment-dots"></i>
+                                <span>Your Message *</span>
+                            </label>
+                            <textarea 
+                                id="contactMessage" 
+                                name="message" 
+                                rows="5" 
+                                class="form-control textarea-control" 
+                                placeholder="Please share details about your project, timeline, or requirements..." 
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="form-footer-action">
+                            <button type="submit" class="btn-primary btn-submit" id="submitBtn">
+                                <span>Send Message</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                            <span class="privacy-note">
+                                <i class="fa-solid fa-lock"></i>
+                                <span>Your information is strictly kept private.</span>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

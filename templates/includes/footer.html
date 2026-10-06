@@ -1,0 +1,89 @@
+{% load static %}
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-container">
+            <!-- Brand Column -->
+            <div class="footer-col footer-brand-col">
+                <div class="footer-logo">
+                    <img src="{% static 'images/logo.jpg' %}" alt="Aman Kumar Thakur Logo" class="footer-logo-img">
+                    <div class="footer-logo-text">
+                        <h3>Aman Kumar Thakur</h3>
+                        <p class="role-tag">Full-Stack Web Developer</p>
+                    </div>
+                </div>
+                <p class="footer-bio">
+                    Dedicated to transforming ideas into scalable, aesthetically striking web applications. Specializing in Python, Django, and modern JavaScript.
+                </p>
+                <div class="social-links" aria-label="Social media profiles">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter Profile">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="mailto:contact@amankumar.dev" class="social-icon" aria-label="Send Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Navigation -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="{% url 'home' %}"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+                    <li><a href="{% url 'about' %}"><i class="fa-solid fa-angle-right"></i> About Me</a></li>
+                    <li><a href="{% url 'home' %}#projects"><i class="fa-solid fa-angle-right"></i> Projects</a></li>
+                    <li><a href="{% url 'contact' %}"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services / Expertise -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Specializations</h4>
+                <ul class="footer-nav-list">
+                    <li><span><i class="fa-solid fa-code"></i> Django & Python Backend</span></li>
+                    <li><span><i class="fa-solid fa-laptop-code"></i> Frontend Web Development</span></li>
+                    <li><span><i class="fa-solid fa-mobile-screen"></i> Responsive UI / UX</span></li>
+                    <li><span><i class="fa-solid fa-database"></i> Database Architecture</span></li>
+                </ul>
+            </div>
+
+            <!-- Status / Direct Contact -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Let's Connect</h4>
+                <div class="availability-card">
+                    <span class="pulse-dot"></span>
+                    <div>
+                        <strong>Available for Hire</strong>
+                        <p>Freelance & Full-time Opportunities</p>
+                    </div>
+                </div>
+                <a href="{% url 'contact' %}" class="btn-footer-contact">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Start a Conversation</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Strip -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-container">
+            <p class="copyright-text">
+                &copy; 2026 <strong>Aman Kumar Thakur</strong>. All rights reserved.
+            </p>
+            <div class="tech-badge">
+                <span>Crafted with</span>
+                <i class="fa-solid fa-heart" style="color: #ef4444;"></i>
+                <span>using Django &amp; Vanilla CSS</span>
+            </div>
+            <button class="back-to-top" id="backToTopBtn" aria-label="Scroll back to top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+    </div>
+</footer>

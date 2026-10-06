@@ -1,0 +1,289 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About Aman Kumar Thakur | Full-Stack Web Developer{% endblock %}
+
+{% block content %}
+<!-- About Page Hero -->
+<section class="page-hero">
+    <div class="section-container">
+        <div class="page-hero-content text-center">
+            <span class="section-kicker">Professional Background</span>
+            <h1 class="page-title">About <span class="gradient-text">Aman Kumar Thakur</span></h1>
+            <p class="page-subtitle">
+                Passionate Web Developer, problem solver, and digital craftsman dedicated to engineering robust web applications with modern design and resilient architecture.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Main Bio & Profile Details -->
+<section class="about-detail-section">
+    <div class="section-container">
+        <div class="about-detail-grid">
+            <!-- Left Profile Card -->
+            <div class="about-profile-card">
+                <div class="profile-card-inner">
+                    <div class="profile-avatar-wrap">
+                        <img src="{% static 'images/logo.jpg' %}" alt="Aman Kumar Thakur" class="profile-avatar-img">
+                        <span class="profile-badge-active" title="Available for hire">
+                            <span class="active-pulse"></span>
+                        </span>
+                    </div>
+
+                    <h2 class="profile-name">Aman Kumar Thakur</h2>
+                    <p class="profile-role">Full-Stack Web Developer</p>
+
+                    <div class="profile-divider"></div>
+
+                    <ul class="profile-meta-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Based in India (Remote Available)</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-code"></i>
+                            <span>Python, Django, JavaScript, CSS3</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span>Freelance &amp; Full-Time</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>contact@amankumar.dev</span>
+                        </li>
+                    </ul>
+
+                    <div class="profile-social-actions">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="mailto:contact@amankumar.dev" class="social-circle-btn" aria-label="Email Aman">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </a>
+                    </div>
+
+                    <div class="profile-cta-wrap">
+                        <a href="{% url 'contact' %}" class="btn-primary full-width">
+                            <span>Get In Touch</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Narrative & Story -->
+            <div class="about-narrative">
+                <div class="narrative-block">
+                    <h3 class="narrative-heading">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                        <span>Who I Am</span>
+                    </h3>
+                    <p class="narrative-lead">
+                        Hi, I'm <strong>Aman Kumar Thakur</strong>, a passionate web developer with experience in building dynamic, responsive, and aesthetically engaging web applications.
+                    </p>
+                    <p class="narrative-body">
+                        My journey in web engineering began with a genuine curiosity for how digital platforms function under the hood. Over the years, that curiosity has grown into a focused dedication to mastering both server-side logic and client-facing interfaces.
+                    </p>
+                    <p class="narrative-body">
+                        I specialize in <strong>Python and the Django framework</strong> for backend systems, paired with standard-compliant <strong>HTML5, Vanilla CSS3, and JavaScript</strong> for creating fluid, accessible user experiences. I take pride in writing code that is clean, well-documented, and performant.
+                    </p>
+                </div>
+
+                <div class="narrative-block">
+                    <h3 class="narrative-heading">
+                        <i class="fa-solid fa-gem"></i>
+                        <span>Core Values &amp; Philosophy</span>
+                    </h3>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div>
+                                <h4>Code Quality &amp; Structure</h4>
+                                <p>Writing clean, maintainable, and modular code that teams can easily collaborate on and scale over time.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                            <div>
+                                <h4>Pixel-Perfect Responsiveness</h4>
+                                <p>Ensuring websites look stunning and function seamlessly across phones, tablets, and high-res desktops.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i class="fa-solid fa-bolt"></i></div>
+                            <div>
+                                <h4>Speed &amp; Performance</h4>
+                                <p>Optimizing asset loading, database queries, and lightweight CSS to guarantee swift load times.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                            <div>
+                                <h4>Continuous Improvement</h4>
+                                <p>Actively exploring modern web standards, new Django best practices, and innovative design aesthetics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="narrative-block">
+                    <h3 class="narrative-heading">
+                        <i class="fa-solid fa-route"></i>
+                        <span>How I Approach Development</span>
+                    </h3>
+                    <div class="workflow-steps">
+                        <div class="step-card">
+                            <span class="step-num">01</span>
+                            <h4>Understand &amp; Architect</h4>
+                            <p>Analyzing requirements, structuring database models, and designing intuitive user journeys before writing code.</p>
+                        </div>
+                        <div class="step-card">
+                            <span class="step-num">02</span>
+                            <h4>Build &amp; Implement</h4>
+                            <p>Developing scalable Django endpoints, clean views, and dynamic frontend components with modern CSS.</p>
+                        </div>
+                        <div class="step-card">
+                            <span class="step-num">03</span>
+                            <h4>Polish &amp; Test</h4>
+                            <p>Validating across browsers, checking mobile responsiveness, and testing edge cases for flawless reliability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Detailed Breakdown -->
+<section class="skills-detail-section">
+    <div class="section-container">
+        <div class="section-header text-center">
+            <span class="section-kicker">Technical Proficiency</span>
+            <h2 class="section-title">Skills &amp; Technology Matrix</h2>
+            <p class="section-subtitle">
+                A breakdown of technologies and tools I utilize regularly to build reliable digital products.
+            </p>
+        </div>
+
+        <div class="skills-matrix-grid">
+            <div class="matrix-card">
+                <div class="matrix-icon"><i class="fa-brands fa-python"></i></div>
+                <div class="matrix-info">
+                    <div class="matrix-header">
+                        <h4>Python &amp; Django</h4>
+                        <span class="proficiency-tag">Advanced</span>
+                    </div>
+                    <p>Building secure views, models, forms, ORM queries, templates, and REST endpoints.</p>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="matrix-card">
+                <div class="matrix-icon"><i class="fa-brands fa-html5"></i></div>
+                <div class="matrix-info">
+                    <div class="matrix-header">
+                        <h4>HTML5 &amp; Semantic Web</h4>
+                        <span class="proficiency-tag">Advanced</span>
+                    </div>
+                    <p>Clean markup, accessibility compliance (a11y), SEO meta tags, and structured data.</p>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-fill" style="width: 95%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="matrix-card">
+                <div class="matrix-icon"><i class="fa-brands fa-css3-alt"></i></div>
+                <div class="matrix-info">
+                    <div class="matrix-header">
+                        <h4>Modern CSS3 &amp; Styling</h4>
+                        <span class="proficiency-tag">Advanced</span>
+                    </div>
+                    <p>CSS Grid, Flexbox, custom variables, animations, glassmorphism, responsive breakpoints.</p>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-fill" style="width: 92%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="matrix-card">
+                <div class="matrix-icon"><i class="fa-brands fa-js"></i></div>
+                <div class="matrix-info">
+                    <div class="matrix-header">
+                        <h4>JavaScript (ES6+)</h4>
+                        <span class="proficiency-tag">Proficient</span>
+                    </div>
+                    <p>DOM manipulation, async/await, fetch API, event handling, interactive UI components.</p>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="matrix-card">
+                <div class="matrix-icon"><i class="fa-solid fa-database"></i></div>
+                <div class="matrix-info">
+                    <div class="matrix-header">
+                        <h4>Databases &amp; Storage</h4>
+                        <span class="proficiency-tag">Proficient</span>
+                    </div>
+                    <p>Relational database modeling with SQLite, migrations, schema planning, queries.</p>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-fill" style="width: 82%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="matrix-card">
+                <div class="matrix-icon"><i class="fa-brands fa-git-alt"></i></div>
+                <div class="matrix-info">
+                    <div class="matrix-header">
+                        <h4>Git &amp; Version Control</h4>
+                        <span class="proficiency-tag">Proficient</span>
+                    </div>
+                    <p>Branching strategies, repository management, commit best practices, and collaboration.</p>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-fill" style="width: 88%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About CTA Banner -->
+<section class="cta-section">
+    <div class="section-container">
+        <div class="cta-banner">
+            <div class="cta-glow"></div>
+            <div class="cta-content">
+                <span class="cta-badge">Let's Work Together</span>
+                <h2 class="cta-title">Interested in Collaborating?</h2>
+                <p class="cta-subtitle">
+                    Whether you have an upcoming project, need freelance expertise, or want to discuss a full-time role, I'd love to hear from you.
+                </p>
+                <div class="cta-buttons">
+                    <a href="{% url 'contact' %}" class="btn-primary btn-large">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Send Me a Message</span>
+                    </a>
+                    <a href="{% url 'home' %}#projects" class="btn-secondary btn-large">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span>View My Projects</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Aman Kumar Thakur - Full-Stack Web Developer Portfolio specializing in Django, Python, JavaScript, and responsive modern web engineering.">
+    <meta name="keywords" content="Aman Kumar Thakur, Web Developer, Django Developer, Python, JavaScript, Portfolio, Frontend, Backend">
+    <meta name="author" content="Aman Kumar Thakur">
+
+    <title>{% block title %}Aman Kumar Thakur | Full-Stack Web Developer{% endblock %}</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <!-- Background Ambient Glow Effects -->
+    <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
+    <div class="ambient-glow glow-bottom-right" aria-hidden="true"></div>
+
+    <!-- Navigation Header -->
+    {% include "includes/nevbar.html" %}
+
+    <!-- Flash Messages Container -->
+    {% if messages %}
+    <div class="toast-container" id="toastContainer" role="alert" aria-live="polite">
+        {% for message in messages %}
+        <div class="toast-message toast-{{ message.tags }}">
+            <div class="toast-content">
+                <i class="fa-solid {% if message.tags == 'success' %}fa-circle-check{% elif message.tags == 'error' %}fa-circle-exclamation{% else %}fa-circle-info{% endif %}"></i>
+                <span>{{ message }}</span>
+            </div>
+            <button class="toast-close" onclick="this.parentElement.remove()" aria-label="Close alert">&times;</button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Main Page Content -->
+    <main id="main-content" class="main-wrapper">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    {% include "includes/footer.html" %}
+
+    <!-- Main JavaScript -->
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
